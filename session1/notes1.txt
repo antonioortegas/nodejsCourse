@@ -1,0 +1,18 @@
+NodeJS is a runtime, not a languaje/framework...
++ Open source
++ Multiplatform
++ Asynchronous
++ Event driven arquitecture (single thread). It has a loop that checks for events and executes the callback associated with that event
++ Built with C++ (V8 engine), Chrome's JS engine
+
+Running "node" in the terminal opens a REPL (Read-Eval-Print-Loop) where you can run JS code
+
+Run a JS file with NodeJS: `node <file_name>`
+
+Why can you use console.log() in NodeJS?
+Because js now has a global variable "globalThis" that contains the global scope of the program. In the browser, the global scope points to "window"
+In node, the global scope points to "global"
+This way, you can access the console object with `globalThis.console`
+So any time you use console.log(), you are actually using `globalThis.console.log()`
+We use globalThis instead of global/window because this way we can use the same code in the browser and in NodeJS
+console, Promise, fetch... are all part of the globalThis object
