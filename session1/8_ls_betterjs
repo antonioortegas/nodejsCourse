@@ -1,0 +1,37 @@
+const fs = require('node:fs/promises')
+const path = require('node:path')
+
+const folder = process.argv[2] ?? './' //if no argument is passed, use the current directory
+
+
+async function ls(folder) {
+    let files
+    try{
+        files = await fs.readdir(folder)
+    } catch {
+        console.error("Error reading directory:  ${directory}")
+        process.exit(1)
+    }
+
+    const filesPromises = files.map(async file => {
+        const filePath = path.join(folder, file)
+        let stats
+        try{
+            stats = await fs.stat(filePath)
+        } catch(err) {
+            console.error("Error reading file:  ${filePath}")
+            process.exit(1)
+        }
+
+        const isDirectory = stats.isDirectory()
+        const fileType = isDirectory ? 'directory' : 'file'
+
+        return ${fileType} - ${file}
+    })
+
+    const filesInfo = await Promise.all(filesPromises)
+    filesInfo.forEach(fileInfo => console.log(fileInfo))
+    
+}
+
+ls(folder)
