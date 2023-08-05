@@ -1,5 +1,5 @@
-//Using ES Modules (recommended)
-//js uses commonJS by default, mjs uses ES Modules and cjs uses commonJS
+// Using ES Modules (recommended)
+// js uses commonJS by default, mjs uses ES Modules and cjs uses commonJS
 
 import { sum, sub } from './sum.mjs'
 console.log(sum(1, 2))

@@ -16,3 +16,26 @@ This way, you can access the console object with `globalThis.console`
 So any time you use console.log(), you are actually using `globalThis.console.log()`
 We use globalThis instead of global/window because this way we can use the same code in the browser and in NodeJS
 console, Promise, fetch... are all part of the globalThis object
+
+NPM (Node Package Manager)
+when initializing a project with npm, it creates a package.json file that contains the project's metadata (name, version, dependencies, etc)
+to start a project with npm, run `npm init` in the terminal. It will ask you a few questions and then create the package.json file
+as an examples, I installed the dependency "picocolors" with `npm install picocolors` and it added it to the dependencies in the package.json file
+the karet (^) in the version number means that it will install the latest version of the package, and update it when a new version is released
+if you want to install a specific version, you can do it with `npm install picocolors@1.0.0`
+recommended to remove the karet if deploying or being careful with the versions
+working with versions, usually the first number is the major version, the second is the minor version and the third is the patch version [X.X.X]
+mayor version: breaking changes (not backwards compatible)
+minor version: new features (backwards compatible)
+patch version: bug fixes (backwards compatible)
+
+Node has 2 types of dependencies:
++ prodDependencies: dependencies that are required to run the project
++ devDependencies: dependencies that are only required for development (testing, linting, etc)
+
+for example, to install a linter:
+npm install standard -D (the -D flag means that it will be installed as a devDependency, so it won't be installed when deploying the project, saving resources)
+go to package.json and add a script to run the linter:
+"eslintConfig": {
+    "extends": "standard"
+},
