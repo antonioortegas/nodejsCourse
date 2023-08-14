@@ -1,0 +1,12 @@
+###Get Lapras info
+GET http://localhost:3000/pokemon/lapras
+
+###Create new pokemon !!!SPACES ARE IMPORTANT!!!
+POST http://localhost:3000/pokemon
+
+{
+  "name": "Lapras",
+  "type": "Water",
+  "type2": "Ice",
+  "level": 20
+}
