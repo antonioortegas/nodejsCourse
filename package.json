@@ -6,9 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx standard --fix",
-    "dev1": "nodemon ./session2/1_http.js",
-    "dev2": "nodemon ./session2/2_http.js",
-    "dev3": "node --watch ./session2/3_express.js"
+    "dev21": "nodemon ./session2/1_http.js",
+    "dev22": "nodemon ./session2/2_http.js",
+    "dev23": "node --watch ./session2/3_express.js",
+    "dev3": "node --watch ./session3/app.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,8 @@
   "homepage": "https://github.com/antonioortegas/nodejsCourse#readme",
   "dependencies": {
     "express": "4.18.2",
-    "picocolors": "1.0.0"
+    "picocolors": "1.0.0",
+    "zod": "3.22.0"
   },
   "devDependencies": {
     "eslint": "^8.46.0",

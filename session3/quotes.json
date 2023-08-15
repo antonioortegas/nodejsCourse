@@ -1,0 +1,43 @@
+[
+    {
+        "id": "1",
+        "book": "The Way of Kings",
+        "chapter": "41",
+        "character": "Lirin",
+        "quote": "Somebody has to start. Somebody has to step forward and do what is right, because it is right. If nobody starts, then others cannot follow.",
+        "extras": [
+            "Kaladin"
+        ]
+    },
+    {
+        "id": "2",
+        "book": "Words of Radiance",
+        "chapter": "56",
+        "character": "Kaladin",
+        "quote": "Honor is dead. But I'll see what I can do.",
+        "extras": [
+            "Dalinar",
+            "Syl",
+            "Shallan",
+            "Adolin"
+        ]
+    },
+    {
+        "id": "3",
+        "book": "OathBringer",
+        "chapter": "82",
+        "character": "Hoid",
+        "quote": "Accept the pain, but do not accept that you deserved it.",
+        "extras": [
+            "Shallan"
+        ]
+    },
+    {
+        "id": "4",
+        "book": "Rythm of War",
+        "chapter": "108",
+        "character": "Kaladin",
+        "quote": "I accept that there will be those I cannot protect.",
+        "extras": []
+    }
+]
