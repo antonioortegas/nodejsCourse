@@ -1,0 +1,26 @@
+### get all quotes
+GET http://localhost:3000/quotes
+
+### get quote by id (1)
+GET http://localhost:3000/quotes/1
+
+### get all quotes by character (Kaladin)
+GET http://localhost:3000/quotes?character=Kaladin
+
+### create quote
+POST http://localhost:3000/quotes
+Content-Type: application/json
+
+{
+  "quote": "Life before death.",
+  "character": "Kaladin",
+  "book": "The Way of Kings"
+}
+
+### update quote
+PUT http://localhost:3000/quotes/1
+Content-Type: application/json
+
+{
+  "book": "OathBringer"
+}
